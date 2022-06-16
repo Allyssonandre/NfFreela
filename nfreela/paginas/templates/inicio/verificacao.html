@@ -1,0 +1,143 @@
+{% load static %}
+{% load bootstrap %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="NFreela" content="NFreela">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <title>PREMIUM&nbsp;-&nbsp;{{user.get_username}}</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/components.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/horizontal-menu.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tour.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="{% url 'meuperfil'%}" class="fa fa-user">&nbsp;Meu Perfil</a></li>
+              {% if user.is_authenticated %}
+              <li class="scroll-to-section"><a href="/accounts/logout" class="fa fa-reply-all">&nbsp;Sair</a></li>
+              {% endif %}
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="welcome-area" id="welcome">
+    <div class="header-text">
+      <div class="container">
+        <div class="row">
+          <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+            <br>
+            <br>
+            <br>
+            <p style="font-size: 25px;color: #ffffff;" class="feather icon-star">&nbsp;PREMIUM <b style="color: yellow;">{{user.get_username}}</b>
+              {% if messages %}
+              {% for message in messages %}
+              <div {% if message.tags %} class="alert alert-dark {{message.tags}}" {% endif %} role="alert" style="color: white;font-size: 17px;">
+                {{message}}&nbsp;{{user.get_username}}&nbsp;VOCÊ JÁ FAZ PARTE DA FAMÍLIA NFreela.
+              </div>
+              {% endfor %}
+              {% endif %}
+              <div div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="50000" style="margin: 0;">
+                <div class="toast-header">
+                  <img src="{% static 'img/logoOficial.jpg'%}" class="" alt="imgNfreela" style="width: 30px;height: 30px;">&nbsp;
+                  <strong class="mr-auto" style="font-family: Times New Roman;font-size: 17px;margin: auto;">Pode ir para seu perfil, Obrigado !!!</strong>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>]
+                </div>
+                <div class="text-center">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+              <img src="{% static 'img/check.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="col-lg-12">
+        </div>              
+      </div>
+    </section>
+    <!-- ***** Footer ***** -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-12 col-sm-12">
+            <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <ul class="social">
+              <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- jQuery -->
+      <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+      <!-- Bootstrap -->
+      <script src="{% static 'js/popper.js' %}"></script>
+      <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+      <!-- Plugins -->
+      <script src="{% static 'js/owl-carousel.js' %}"></script>
+      <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+      <script src="{% static 'js/waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+      <script src="{% static 'js/imgfix.min.js' %}"></script> 
+      <!-- Global Init -->
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script>
+        $(document).ready(function(){
+          $('.toast').toast('show');
+        });
+      </script>
+    </body>
+    </html>

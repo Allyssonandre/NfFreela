@@ -1,0 +1,104 @@
+{% load static %}
+{% load bootstrap %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html class="loading" lang="pt-br" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    
+    <meta name="NFreela" content="">
+    <title>NFreela-Login</title>
+    <link rel="apple-touch-icon" href="{% static 'img/apple-icon-120.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '../../../css/horizontal-menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/authentication.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body class="horizontal-layout horizontal-menu 1-column  navbar-floating footer-static 
+bg-full-screen-image  blank-page blank-page" data-open="hover" data-menu="horizontal-menu" data-col="1-column"
+style="background-color: #dde8e9;">
+<!-- BEGIN: Content-->
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <section class="row flexbox-container">
+                <div class="col-xl-8 col-11 d-flex justify-content-center">
+                    <div class="card bg-authentication rounded-0 mb-0">
+                        <div class="row m-0">
+                            <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
+                                <img src="{% static 'img/logoOficial.jpg' %}" alt="branding logo" class="" style="width: 300px;height: 100%;">
+                            </div>
+                            <div class="col-lg-6 col-12 p-0">
+                                <div class="card rounded-0 mb-0 px-2">
+                                    <div class="card-header pb-1">
+                                        <div class="card-title">
+                                            <h1 class="mb-0"><i class="fa fa-briefcase" style="color: #8586E9">&nbsp;NFreela</i></h1>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card-content">
+                                       <div class="card-body pt-1">
+                                        <form class="form-signin" method="post">
+                                            {% csrf_token %}
+                                            {{form|crispy}}
+                                            {% if form.errors %}
+                                            <div class="alert alert-danger" role="alert">
+                                                Seu usuário não confere com sua senha, ou você esta desativado temporariamente por falta de pagamento. Entre em contato pelos canais do NFreela, 
+                                                <p style="color: black;">nfreelaemprego@gmail.com</p>.
+                                            </div>
+                                            {% endif %}
+                                            <a href="/password-reset"><p style="font-family: Times New Roman;font-size: 20px;font-weight: bold;">Esqueceu a senha ?</p></a>
+                                            <div class="form-group d-flex justify-content-between align-items-center">
+                                                <div class="text-left">
+                                                    <br>
+                                                    <i class="fa fa-reply-all" style="font-size: 20px;color: #8586E9"><a href="/">&nbsp;Página Principal</a></i>
+                                                </div>
+                                            </div>
+                                            <a href="/accounts/register" class="btn btn-outline-primary float-left btn-inline">Registre-se</a>
+                                            <button type="submit" class="btn btn-primary float-right btn-inline">Entrar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="login-footer">
+                                    <div class="footer-btn d-inline">
+                                        <a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"" class="btn btn-facebook"><span class="fa fa-facebook"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/nfreelaemprego/" target="_blank" class="btn btn-twitter white"><span class="fa fa-instagram"></span></a>
+                                        <a href="#" title="nfreelaemprego@gmail.com" class="btn btn-google"><span class="fa fa-google"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</div>
+<!-- BEGIN: Vendor JS-->
+<script src="{% static 'js/vendors.min.js' %}"></script>
+<!-- BEGIN: Page Vendor JS-->
+<script src="{% static 'js/jquery.sticky.js' %}"></script>
+<!-- BEGIN: Theme JS-->
+<script src="{% static 'js/app-menu.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/components.js' %}"></script>
+</body>
+</html>

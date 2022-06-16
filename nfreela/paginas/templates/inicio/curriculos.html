@@ -1,0 +1,101 @@
+{% load static %}
+{% load bootstrap %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+	<title>Currículos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="NFreela" content="NFreela">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="NFreela" content="NFreela">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<!--CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="col-12"></div><br><br>
+		<div class="row">
+			<h1 style="font-family: Times New Roman;color: #138496;">Banco de currículos NFreela</h1>
+			<hr>
+			<div class="col-12"><br>
+				<div class="col-4">
+					<form class="form-inline mt-2 mt-md-0" method="GET">
+						<input name="busca" class="form-control mr-sm-2" type="text" placeholder="Profissão...?" aria-label="Search">
+						<button type="submit" class="btn btn-info fa fa-search-plus">&nbsp;BUSCA</button>
+					</form>
+				</div>
+				<br>
+				<table class="table">
+					<thead>
+						<tr>
+							<th><i class="fa fa-briefcase"></i>&nbsp;Profissão</th>
+							<th><i class="fa fa-paperclip"></i>&nbsp;Arquivo</th>
+							<th><i class="fa fa-user"></i>&nbsp;Usuário</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						{% if pdfs %}
+						{% for p in pdfs %}
+						<tr>
+							<td style="font-family: Times New Roman;font-size: 20px;">{{p.profissao}}</td>
+							<td><a href="{{p.pdf.url}}" class="btn btn-info btn-sm fa fa-download" target="_blank">&nbsp;BAIXA</a>
+							</td>
+							<td style="font-family: Times New Roman;font-size: 20px;">{{p.user}}</td>
+
+						</tr>
+					</div>
+					{% endfor %}
+					{% else %}
+					<div class="alert alert-danger" role="alert">
+						NÃO TEMOS CURRÍCULOS CADASTRADOS NO MOMENTO !! 
+						
+						{% endif %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<footer class="container py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 col-md-12 col-sm-12">
+						<p class="copyright">Todos os direitos reservados &copy; 2020 NFreela <br>
+							CNPJ - 38.186.702/0001-84 <br>
+						</p>
+					</div>
+					<div class="col-lg-5 col-md-12 col-sm-12">
+						<ul class="social">
+							<li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- jQuery -->
+		<script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+		<!-- Bootstrap -->
+		<script src="{% static 'js/popper.js' %}"></script>
+		<script src="{% static 'js/bootstrap1.min.js' %}"></script>
+		<!-- Plugins -->
+		<script src="{% static 'js/owl-carousel.js' %}"></script>
+		<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+		<script src="{% static 'js/waypoints.min.js' %}"></script>
+		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'js/imgfix.min.js' %}"></script> 
+		<!-- Global Init -->
+		<script src="{% static 'js/custom.js' %}"></script>
+	</body>
+	</html>

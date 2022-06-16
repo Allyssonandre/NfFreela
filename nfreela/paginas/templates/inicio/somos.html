@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="NFreela" content="">
+  <meta name="NFreela" content="NFreela">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <title>NFreela</title>
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app-user.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="submenu">
+                <a href="javascript:;">Empresa</a>
+                <ul>
+                  <li class="scroll-to-section"><a href="{% url 'termos' %}" class="fa fa-newspaper-o">&nbsp;Termos de Uso</a></li>
+                </ul>
+              </li>
+              <li class="scroll-to-section"><a href="/" class="fa fa-home">&nbsp;Início</a></li>
+              <li class="scroll-to-section"><a href="{% url 'prepesquisa' %}" class="fa fa-search-plus">&nbsp;Contrate</a></li>
+              <li class="scroll-to-section"><a href="{% url 'formulario' %}" class="fa fa-edit">&nbsp;Cadastro</a></li>
+              <li class="scroll-to-section"><a href="../accounts/login" class="fa fa-lock">&nbsp;Login</a></li>
+              <li class="scroll-to-section"><a href="../accounts/register" class="fa fa-pencil-square-o">&nbsp;Registre-se</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="welcome-area" id="welcome">
+    <div class="header-text">
+      <div class="container">
+        <div class="row">
+          <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+            <p style="font-family: Times New Roman;font-size: 30px;">EMPRESA</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+            <img src="{% static 'img/empresa.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section" id="about">
+    <!-- CONTAINER PARA OUTDOOR PARA PROPAGANDA -->
+    <div class="container"></div>
+    <!-- FIM DA PROPAGANDA -->
+    <div class="container">
+     <div class="row">
+      <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+        <img src="{% static 'img/img1.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+      </div>
+      <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
+        <div class="left-heading">
+          <h5 class="fa fa-home">&nbsp;Somos<hr style="background-color: gray;"></h5>
+        </div>
+        <div class="left-text">
+          <p style="font-family: Times New Roman;font-size: 20px;">
+           O NFreela é uma plataforma que disponibiliza um ambiente para que pessoas mostrem suas habilidades  profissionais através dos nossos serviços de postagens,  O intuito do site é presta um serviço as pessoas que trabalham como freelancer ou querem divulgar seus trabalhos, Disponibilizamos nossos canais de divulgação para futuros contratantes, Temos duas categorias a oferecer para os autônomos, são elas: o <a href="accounts/register">PROFISSIONAL PREMIUM</a> e o <a href="{% url 'formulario' %}">PROFISSIONAL FREE</a>.
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- ***** Footer ***** -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-12 col-sm-12">
+        <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- jQuery -->
+<script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap1.min.js' %}"></script>
+<!-- Plugins -->
+<script src="{% static 'js/owl-carousel.js' %}"></script>
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/imgfix.min.js' %}"></script> 
+<!-- Global Init -->
+<script src="{% static 'js/custom.js' %}"></script>
+<script type="text/javascript">
+  $('#element').tooltip('show')
+</script>
+</body>
+</html>

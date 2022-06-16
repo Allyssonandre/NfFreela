@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="NFreela" content="NFreela">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <title>NFreela</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app-user.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="fa fa-home">&nbsp;Início</a></li>
+              <!-- <li class="scroll-to-section"><a href="{% url 'videospremium' %}" class="fa fa-play">&nbsp;Vídeos Currículo</a></li> -->
+              <li class="scroll-to-section"><a href="{% url 'termos' %}" class="fa fa-newspaper-o">&nbsp;Termos de uso</a></li>
+              <li class="scroll-to-section"><a href="{% url 'formulario' %}" class="fa fa-edit">&nbsp;Cadastro Free</a></li>
+              <li class="scroll-to-section"><a href="/" class="fa fa-edit">&nbsp;Contrate PREMIUM</a></li>
+              <li class="scroll-to-section"><a href="../accounts/login" class="fa fa-lock">&nbsp;Login</a></li>
+              <li class="scroll-to-section"><a href="../accounts/register" class="fa fa-pencil-square-o">&nbsp;Registre-se</a></li>
+              <!-- PARA FUTUROS LIKS --> 
+                           <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>
+                          -->
+                        </ul>
+                        <a class='menu-trigger'>
+                          <span>Menu</span>
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="welcome-area" id="welcome">
+                <div class="header-text">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1 style="font-family: Times New Roman;">Contrate</h1>
+                        <p style="font-size: 18px;font-family: Roboto;">Escolha um profissional.</p>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="{% static 'img/right-image.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <section class="section" id="about">
+                <div class="container">
+                  <div class="col-lg-12">
+                    <!-- <a href="{% url 'videospremium' %}" class="btn btn-primary mr-1"><i class="fa fa-play"></i>&nbsp;Videos Currí­culo</a> -->     
+                  </div>
+                  <hr>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="hr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+               <form class="form-inline mt-2 mt-md-0" method="GET">
+                 <input type="text"  name="busca" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: Diarista, pintor ......?" value="">
+                 <button type="submit" class="btn btn-info">Pesquisa</button>
+               </form>
+               <hr>
+               <br>
+
+               {% if profissional %}
+               {% for p in profissional%}
+               <div class="media">
+                <img src="{{p.image.url}}" class="mr-3" alt="..." width="65" height="65" style="border-radius: 20px;">
+                <div class="media-body">
+                  <h5 class="mt-0">{{p.nome}}</h5>
+                  <b>{{p.profissao}}</b>
+
+                  <p>{{p.cidade}} | {{p.email}} | Leu o termo ? {{p.termo}} | Desde {{p.created_at}}<br>
+                    <a href="https://api.whatsapp.com/send?phone={{profissional.contato}},%20%20{{profissional.nome}}%20%20,me%20contrate!!%20%20%20Sou%20%20{{p.profissao}}||" target="_blank"><img src="{% static 'img/app.png'%}" style="width: 27px;height:27px;">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone={{p.contato}},%20%20{{profissional.nome}}%20%20,me%20contrate!!%20%20%20Sou%20%20{{p.contato}}||" style="color: black;" target="_blank">{{p.contato}}</a><br>
+                    <h6>Habilidade:</h6>
+
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
+                      {{p.Descricao}}
+                    </textarea>
+
+                    <br>
+                    Dados enviados: Por {{p.nome}}
+
+                  </p>
+                </div>
+              </div>
+              <hr>
+              {%endfor%}
+              {%else%}
+              <div class="alert alert-primary" role="alert" style="background-color: green;">
+                Não existe.....pesquise novamente.
+              </div>
+              {% endif%}
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    {% if profissional.has_previous %}
+                    <a class="page-link" href="?page={{ profissional.previous_page_number }}" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    {%endif%}
+                  </li>
+                  {% if profissional.paginator.num_pages%}
+                  <li class="page-item"><a class="page-link" href="#">{{ profissional.number }} até {{ profissional.paginator.num_pages }}</a></li>   
+                  {% endif %}
+
+                  {% if profissional.has_next %}
+
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ profissional.next_page_number }}" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    {% endif %}
+                  </li>
+                </ul>
+              </nav>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Footer ***** -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+              <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12">
+              <ul class="social">
+                <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- jQuery -->
+      <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+      <script src="{% static 'js/vendors.min.js' %}"></script>
+      <!-- Bootstrap -->
+      <script src="{% static 'js/popper.js' %}"></script>
+      <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+      <!-- Plugins -->
+      <script src="{% static 'js/owl-carousel.js' %}"></script>
+      <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+      <script src="{% static 'js/waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+      <script src="{% static 'js/imgfix.min.js' %}"></script> 
+      <!-- Global Init -->
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script src="{% static 'js/jquery.sticky.js' %}"></script>
+      <script src="{% static 'js/apexcharts.min.js' %}"></script>
+      <script src="{% static 'js/tether.min.js' %}"></script>
+      <script src="{% static 'js/shepherd.min.js' %}"></script>
+      <!-- BEGIN: Theme JS-->
+      <script src="{% static 'js/app-menu.js' %}"></script>
+      <script src="{% static 'js/app.js' %}"></script>
+      <script src="{% static 'js/components.js' %}"></script>
+    </body>
+    </html>

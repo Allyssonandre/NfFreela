@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="NFreela" content="NFreela">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <title>NFreela</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app-user.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="fa fa-home">&nbsp;Início</a></li>
+              <li class="scroll-to-section"><a href="{% url 'termos' %}" class="fa fa-newspaper-o">&nbsp;Termos de uso</a></li>
+              <li class="scroll-to-section"><a href="{% url 'formulario' %}" class="fa fa-edit">&nbsp;Cadastro</a></li>
+              <li class="scroll-to-section"><a href="../accounts/login" class="fa fa-lock">&nbsp;Login</a></li>
+              <li class="scroll-to-section"><a href="../accounts/register" class="fa fa-pencil-square-o">&nbsp;Registre-se</a></li>
+              <!-- PARA FUTUROS LIKS --> 
+                           <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>
+                          -->
+                        </ul>
+                        <a class='menu-trigger'>
+                          <span>Menu</span>
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="welcome-area" id="welcome">
+                <div class="header-text">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1 style="font-family: Times New Roman;font-size: 45px;">Contrate um PREMIUM</h1>
+                        <div> 
+                          <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i>
+                          <i class="feather icon-star" style="color: yellow;font-size: 20px"></i>
+                          <i class="feather icon-star" style="color: yellow;font-size: 20px"></i>
+                          <i class="feather icon-star" style="color: yellow;font-size: 20px"></i>
+                          <i class="feather icon-star" style="color: yellow;font-size: 20px"></i>
+                        </div>
+                        <p style="font-size: 18px;font-family: Roboto;">Profissional PREMIUM.</p>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="{% static 'img/right-image.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="section" id="about">
+                <div class="container">
+                  <div class="col-lg-12">
+                    <h2><span class="badge badge-warning feather icon-star">PREMIUM</span>
+                      <a href="{% url 'prepesquisa' %}" class="btn btn-primary mr-1" style="border-style: hidden;">Profissional Free</a>
+                    </h2>
+                    <br>
+                    <form method="GET">
+                      <div class="form-group">
+                        <input type="text"  name="busca" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o que está buscando ? Ex: Diarista, pintor ......" value="">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                      </div>
+                      <div class="container">
+                        <button type="submit" class="btn btn-primary" style="border-style: hidden;">Pesquisar</button>&nbsp;<button type="reset" class="btn btn-danger" style="border-style: hidden;">Errei</button>&nbsp;
+                      </div>
+                    </form>
+                    <br>
+                  </div>
+                  <br>   
+                  <div class="row">
+                    {% if profissional %}
+                    {% for p in profissional%}
+                    <div class="card col-lg-3">
+                      <a href="/usuariopremium/{{p.id}}">
+                        <img src="{{ p.image.url }}" class="rounded-circle border border-warning" alt="..." style="width: 100%;height: 280px;margin: auto;">
+                      </a>
+                      <div class="card-body">
+                        <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i>
+                        <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i>
+                        <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i>
+                        <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i>
+                        <i class="feather icon-star" style="color: yellow;font-size: 20px;"></i><br>
+                        <span class="badge badge-warning">PREMIUM</span> 
+                        <p class="card-text" style="font-family: Times New Roman;font-size: 15px;padding: 0;">
+                          {{ p.name}}
+                        </p>
+                        <p class="card-text" style="font-size: 12px;">&nbsp;<b class="fa fa-calendar" style="color: #00bfa5;"></b>&nbsp;Desde {{p.created_at}}</p>
+                        <p class="card-text" style="font-family: Roboto;font-size: 14px;font-weight: bolder;"><b class="feather icon-star" style="color: #00bfa5;"></b>&nbsp;
+                          {{p.profissao}}
+                        </p>
+                        <a href="/usuariopremium/{{p.id}}"><button type="button" class="btn btn-warning" style="border-style: hidden;">Detalhes</button></a>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="alert alert-success col-12" role="alert">
+                      <p style="font-family: Roboto;font-size: 20px;margin-top: 2px;"> Esta profissão ou serviço não consta em nosso Banco de dados, pesquise novamente !!.</p>
+                    </div>
+                    {% endif %}
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-5"></div>
+                    <div class="col-lg-2">
+                      <div class="pagination">
+                        <span class="step-links">
+                          {% if profissional.has_previous %}
+                          <a href="?page={{ profissional.previous_page_number }}"><i class="fa fa-reply-all"></i></a>
+                          {% endif %}
+                          {% if profissional.paginator.num_pages%}
+                          <span class="current">
+                            <p style="font-family: Times New Roman;font-size: 17px;">
+                              {{ profissional.number }} até {{ profissional.paginator.num_pages }}
+                            </p>
+                          </span>
+                          {% endif %}
+                          {% if profissional.has_next %}
+                          <a href="?page={{ profissional.next_page_number }}"><i class="fa fa-arrow-right"></i></a>
+                          {% endif %}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="hr"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- ***** Footer ***** -->
+            <footer>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7 col-md-12 col-sm-12">
+                    <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+                  </div>
+                  <div class="col-lg-5 col-md-12 col-sm-12">
+                    <ul class="social">
+                      <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- jQuery -->
+            <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+            <script src="{% static 'js/vendors.min.js' %}"></script>
+            <!-- Bootstrap -->
+            <script src="{% static 'js/popper.js' %}"></script>
+            <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+            <!-- Plugins -->
+            <script src="{% static 'js/owl-carousel.js' %}"></script>
+            <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+            <script src="{% static 'js/waypoints.min.js' %}"></script>
+            <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+            <script src="{% static 'js/imgfix.min.js' %}"></script> 
+            <!-- Global Init -->
+            <script src="{% static 'js/custom.js' %}"></script>
+            <script src="{% static 'js/jquery.sticky.js' %}"></script>
+            <script src="{% static 'js/apexcharts.min.js' %}"></script>
+            <script src="{% static 'js/tether.min.js' %}"></script>
+            <script src="{% static 'js/shepherd.min.js' %}"></script>
+            <!-- BEGIN: Theme JS-->
+            <script src="{% static 'js/app-menu.js' %}"></script>
+            <script src="{% static 'js/app.js' %}"></script>
+            <script src="{% static 'js/components.js' %}"></script>
+          </body>
+          </html>

@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="NFreela" content="">
+  <meta name="NFreela" content="NFreela">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <title>NFreela</title>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app-user.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="fa fa-home">&nbsp;Início</a></li>
+              <li class="scroll-to-section"><a href="{% url 'prepesquisa' %}" class="fa fa-search-minus">&nbsp;Contrate</a></li>
+              <li class="scroll-to-section"><a href="{% url 'formulario' %}" class="fa fa-edit">&nbsp;Cadastro</a></li>
+              <li class="scroll-to-section"><a href="../accounts/login" class="fa fa-lock">&nbsp;Login</a></li>
+              <li class="scroll-to-section"><a href="../accounts/register" class="fa fa-pencil-square-o">&nbsp;Registre-se</a></li>
+              <!-- PARA FUTUROS LIKS --> 
+                           <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>
+                          -->
+                        </ul>
+                        <a class='menu-trigger'>
+                          <span>Menu</span>
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="welcome-area" id="welcome">
+                <div class="header-text">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <p style="font-family: Times New Roman;font-size: 30px;">Termos de uso e Política de privacidade</p>
+                        <p style="font-size: 28px;font-family: Times New Roman;">Leia</p>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="{% static 'img/right-image.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="section" id="about">
+                <div class="container">
+                  <div class="col-lg-12">
+                    <div class="right-text col-lg-12 col-md-12 col-sm-12 mobile-top-fix">
+                      <div class="left-heading">
+                        <h5 class="fa fa-newspaper-o">&nbsp;Termos de uso e Política de privacidade</h5>
+                      </div>
+                      <div class="left-text">
+                        <br>
+                        <h6>Termos de uso</h6>
+                        <p>&nbsp;Atualizado em 2020
+                          <br>
+                          * Este Termos de Uso assim como a Política de Privacidade poderá ser atualizado a qualquer 
+                          momento, por isso leia diariamente nossas regras.
+                          <br>
+                          Normas e condições para a utilização dos serviços de recrutamento e ou 
+                          ofertas serviços profissionais. Antes de utilizar a plataforma, por favor, leia atentamente os presentes Termos e Condições Gerais de Uso. A leitura do documento é importante para a sua proteção, e de terceiros,
+                          além de garantir, para Você, o melhor uso das nossas plataforma.
+                          <br>
+                          OBJETIVO - O NFreela quer proporcionar a seus USUÁRIOS a maior qualidade possível para os serviços disponibilizados no site. Por essa razão, para manter a integridade e o prestígio do site e de seus clientes, firma os princípios básicos para um correto aproveitamento dos serviços de recrutamento ou oferta de serviços profissionais e as principais infrações quanto a esse uso: A utilização de qualquer serviço disponibilizado pelo NFreela deve possuir o propósito de contratação ou oferta de serviços profissionais. <br>
+                          <strong>* Obrigações do NFreela.</strong> <br>
+                          O NFreela envidará seus melhores esforços para manter o site acessível 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana, de forma segura, ininterrupta e isenta de quaisquer erros. Os USUÁRIOS reconhecem, no entanto, que o NFreela não poderá ser responsabilizado pela inviabilidade de submissão de informações ao site e utilização total ou parcial de serviços ou sistemas decorrentes da impossibilidade de acesso, falhas de comunicação, sistema, energia ou tecnologia não atribuíveis ao site ou a qualquer outra causa fora de seu controle, assim como por eventuais danos decorrentes da atividade de terceiros. <br>
+                          <strong>* Obrigações dos Usuários.</strong> <br>
+                          Os USUÁRIOS autorizam o NFreela a usar,para fins de publicidade, quaisquer fotografias, imagens, vídeos, áudios e demais conteúdos fornecidos por Você e inseridos nas ferramentas do NFreela. Os USUÁRIOS são os únicos responsáveis pelo registro, alteração, divulgação, gerenciamento e cancelamento da conta no sistema e serviços, pela confidencialidade de cada conta individual, bem como por qualquer ato ou fato ocorridos em relação a guarda e manutenção de sua senha e Identificação Positiva e/ou utilização do sistema e serviços. Cada conta deve ser de uso exclusivo e individual do USUÁRIO nela registrado, não podendo ser divulgada ou utilizada por terceiros. Os USUÁRIOS não podem criar uma falsa 
+                          identidade ou utilizar dados de terceiros sem autorização para contratar e/ou utilizar os serviços do NFreela.
+                          <br>
+                          <br>
+                          1-Estes Termos e Condições são um contrato aceito pelo usuário no momento em que Você faz uso da plataforma NFreela, no websites e aplicativo, independentemente de qualquer outra forma de aceitação.
+                          <br>
+                          <br>
+                          2-No uso de nossas plataformas, Você deve obedecer a legislação vigente, a moral, a ordem pública e Termos e Condições aplicáveis, não podendo praticar nenhuma conduta, que sejam contrários a eles.
+                          <br>
+                          <br>
+                          3-Você deverá respeitar os direitos de propriedade intelectual do NFreela e de terceiros.
+                          <br>
+                          <br>
+                          4-O NFreela não se responsabiliza por danos decorrentes da contratação e ou oferta de serviços, Usuários ou não, pois sua atuação se limita a disponibilizar o espaço para oferta de serviços e contratação de profissionais diretamente. Por esse mesmo motivo.
+                          <br>
+                          <br>
+                          5-O NFreela não se responsabiliza pela veracidade das informações contidas nos anúncios de profissionais cadastrados no site, que são de exclusiva responsabilidade dos declarantes.
+                          <br>
+                          <br>
+                          6- O usuário do NFreela deve aceitar a Política de Privacidade.
+                          <br>
+                          <br>
+                          7-O NFreela não se responsabiliza pela conduta dos Usuários, por profissionais e ou serviços anunciados ou insucesso das negociações entre as partes contratado e contratante.
+                          <br>
+                          <br>
+                          8-
+                          O contratante <strong>DEVE</strong> solicita ao prestador de serviço(contratado) o número do CPF para a busca de antecedentes criminais em esferas <strong>FEDERAIS</strong> e <strong>ESTADUAIS</strong>(NADA CONSTA), nos seguintes links: <a href="http://certidao.jfrn.jus.br/certidaoInter/emissaocertidao.aspx" target="_blank" style="color: blue;">JUSTIÇA FEDERAL DO RIO GRANDE DO NORTE (esfera estadual)</a> e <a href="https://portal.trf1.jus.br/Servicos/Certidao/" target="_blank" style="color: blue;">JUSTIÇA FEDERAL — Tribunal Regional Federal da Primeira Região (esfera federal)</a>
+                          <br>
+                          <br>
+                          <hr>
+                          <h6>Política de Privacidade</h6>
+                          <br>
+                          1-Todas as suas informações pessoais recolhidas, serão usadas para ajudar a tornar a sua visita no nosso site o mais produtiva e agradável possível.
+                          <br>
+                          <br>
+                          2-Você <strong>DEVE</strong> ler nosso Termo de Uso.
+                          <br>
+                          <br>
+                          3-O uso do NFreela pressupõe a aceitação deste Acordo de privacidade. A equipe do NFreela reserva-se ao direito de alterar este acordo sem aviso prévio. Deste modo, recomendamos que consulte a nossa política de privacidade 
+                          com regularidade de forma a estar sempre atualizado.
+                          <br>
+                          <br>
+                          4-O NFreela através do seu cadastro de adesão coletara os seguintes dados, Nome completo, Contato(Sendo usado como contato de WhatsApp), E-mail(opcional),Endereço, Data da adesão, Profissão(serviço autônomo considerado uma profissão pelo usuário), Foto(para o perfil), e Descrição breve de suas habilidades ou informações
+                          que possam ser relevantes aos futuros contratantes, como Preço por serviços entre outros.
+                          <br>
+                          <br>
+                          5-É obrigatório preencher o cadastro com o nome completo.
+                          <br>
+                          <br>
+                          6-Os dados que ficarão disponíveis para os contratantes são estes: Nome Completo, Profissão(serviço autônomo), Habilidades(Breve descrição das habilidades do profissional ou informações relevantes), Localização(Cidade, Rua, Bairro e Número), Contato(usado como WhatsApp) e o E-mail.
+                          <br>
+                          <br>
+                          7-O NFreela avisa aos seus usuários que em nossa plataforma conterá links para sites de parceiros comerciais. Em caso de algum usuário acessá-los, será levado a outras páginas web, e consequentemente estará fora do NFreela, e com isso fora de nosso controle. A partir disto o usuário terá que ler os termos de uso e política de privacidade do site que está visitando.
+                          <br>
+                          <br>
+                          8-Ao aceita nosso Termo de Uso e a Política de Privacidade do Nfreela poderá armazenar e divulgar sua informação aos nossos parceiros comerciais, incluindo informação pessoal e informações de contato. Salientando que as informações divulgadas pelos usuários são de inteiras responsabilidades deles. Assim o usuário deverá estar ciente que deverá inseri seus dados pessoais com exatidão.
+                          <br>
+                          <br>
+                          9-As informações dos profissionais autônomos estarão acessíveis para contratantes pesquisarem seu serviço pretendido.
+                          <br>
+                          <br>
+                          10-O Usuário ao inseri os seus dados no nosso banco de dado poderá a qualquer momento pedi a exclusão, através dos nossos meios de comunicação.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="hr"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <footer>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
+                      <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                      <ul class="social">
+                        <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+              <!-- jQuery -->
+              <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+              <!-- Bootstrap -->
+              <script src="{% static 'js/popper.js' %}"></script>
+              <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+              <!-- Plugins -->
+              <script src="{% static 'js/owl-carousel.js' %}"></script>
+              <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+              <script src="{% static 'js/waypoints.min.js' %}"></script>
+              <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+              <script src="{% static 'js/imgfix.min.js' %}"></script> 
+              <!-- Global Init -->
+              <script src="{% static 'js/custom.js' %}"></script>
+              <script type="text/javascript">
+                $('#element').tooltip('show')
+              </script>
+            </body>
+            </html>

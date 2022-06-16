@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="NFreela" content="NFreela">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logoOficial.jpg' %}">
+  <title>NFreela</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/apexcharts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether-theme-arrows.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tether.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/shepherd-theme-default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap2.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap3.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-extended.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-art-factory.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/card-analytics.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/semi-dark-layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/palette-gradient.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app-user.css' %}">
+</head>
+<body>
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>  
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#" class="logo"></a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="fa fa-home">&nbsp;Início</a></li>
+              <li class="scroll-to-section"><a href="{% url 'termos' %}" class="fa fa-newspaper-o">&nbsp;Termos de uso</a></li>
+              <li class="scroll-to-section"><a href="../accounts/login" class="fa fa-lock">&nbsp;Login</a></li>
+              <li class="scroll-to-section"><a href="../accounts/register" class="fa fa-pencil-square-o">&nbsp;Registre-se</a></li>
+              <!-- PARA FUTUROS LIKS --> 
+                           <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>
+                          -->
+                        </ul>
+                        <a class='menu-trigger'>
+                          <span>Menu</span>
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="welcome-area" id="welcome">
+                <div class="header-text">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1 style="font-family: Times New Roman;">Detalhe <i class="fa fa-star" style="color: yellow;"></i></h1>
+                        <p style="font-size: 20px;font-family: Roboto.;">Olá Sou <b style="color: yellow;">{{profissional.name}}</b>
+                          sou PREMIUM
+                        </p>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="{% static 'img/right-image.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <br>
+                <div class="card">
+                  <a href="/" style="font-size: 18px;margin: 10px;"><i class="fa fa-reply-all">Volte a Pesquisar</i></a>
+                  <br>
+                  <div class="col-lg-3" style="margin: 0;margin-left: 20px;" >
+                    <i class="fa fa-star" style="color: yellow;font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: yellow;font-size: 20px"></i>
+                    <i class="fa fa-star" style="color: yellow;font-size: 20px"></i>
+                    <i class="fa fa-star" style="color: yellow;font-size: 20px"></i>
+                    <i class="fa fa-star" style="color: yellow;font-size: 20px"></i><br>
+                    <p>Parabéns você é nosso {{profissional.premium}} !!.</p>
+                  </div>
+                  <div class="card-header">
+                    <div class="card-title fa fa-briefcase" style="font-size: 25px;">&nbsp;{{profissional.name}}&nbsp;<span class="badge badge-warning">PREMIUM</span> 
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="users-view-image">
+                        <img src="{{ profissional.image.url }}" class="rounded-circle" alt="" style="width: 120px;height: 120px;padding: 10px;">
+                      </div>
+                      <br>
+                      <div class="col-12 col-sm-9 col-md-6 col-lg-5">
+                        <p style="font-family: Roboto;font-size: 19px;padding: 10px;">
+                          Tudo bom, muito obrigado pela preferência, você pode entrar em contato pelos meus dados descritos abaixo.
+                        </p>
+                        <br>
+                        <br>
+                      </div>
+                      <div class="col-12 col-sm-9 col-md-6 col-lg-5">
+                        <table>
+                          <tr>
+                            <td class="font-weight-bold fa fa-globe"></td>
+                            <td style="font-size: 24px;font-family: Times New Roman;">{{profissional.cidade}}</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold fa fa-envelope"></td>
+                            <td style="font-size: 24px;font-family: Times New Roman;">{{profissional.email}}</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="col-12 col-md-12 col-lg-5">
+                        <table class="ml-0 ml-sm-0 ml-lg-0">
+                          <tr>
+                            <td class="font-weight-bold"style="font-size: 20px;font-family: Times New Roman;" style="font-size: 20px;font-family: Times New Roman;">PREMIUM? &nbsp;</td>
+                            <td style="font-size: 22px;font-family: Times New Roman;">{{profissional.premium}}</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-family: Times New Roman;font-size: 20px;"><a href="https://api.whatsapp.com/send?phone={{profissional.phone}},%20%20{{profissional.name}}%20%20,me%20contrate!!%20%20%20Sou%20%20{{profissional.profissao}}||" target="_blank"><img src="{% static 'img/app.png'%}" style="width: 27px;height:27px;"></a></td>
+                            <td style="font-family: Times New Roman;font-size: 20px;"><a href="https://api.whatsapp.com/send?phone={{profissional.phone}},%20%20{{profissional.name}}%20%20,me%20contrate!!%20%20%20Sou%20%20{{profissional.profissao}}||" style="color: black;" target="_blank">{{profissional.phone}}</a>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <hr>
+                      <p style="font-family: Times New Roman;font-size: 20px;">
+                        <i class="fa fa-database"></i>Dados enviados : Por {{profissional.name}}
+                      </p>
+                      <p style="font-family: Times New Roman;font-size: 20px;">
+                        <i class="fa fa-user-clock"></i>Ultima atualização dos dados foi : {{profissional.updated_at }}
+                      </p>
+                    </div>                                          
+                  </div>
+                </div>
+                <div class="col-md-12 col-12 ">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-title mb-2 fa fa-briefcase">&nbsp;Habilidades</div>
+                    </div>
+                    <div class="card-body">
+                      <p style="font-family: Times New Roman;font-size: 20px;">
+                        <hr>
+                        {{profissional.Descricao}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ***** Footer ***** -->
+                <footer>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-7 col-md-12 col-sm-12">
+                        <p class="copyright">Todos os direitos reservados &copy; 2020 NFreela </p>
+                      </div>
+                      <div class="col-lg-5 col-md-12 col-sm-12">
+                        <ul class="social">
+                          <li><a href="https://www.facebook.com/NFreela-106756187698518/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="https://www.instagram.com/nfreelaemprego/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="#" title="nfreelaemprego@gmail.com"><i class="fa fa-google-plus-square"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                <!-- jQuery -->
+                <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+                <!-- Bootstrap -->
+                <script src="{% static 'js/popper.js' %}"></script>
+                <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+                <!-- Plugins -->
+                <script src="{% static 'js/owl-carousel.js' %}"></script>
+                <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+                <script src="{% static 'js/waypoints.min.js' %}"></script>
+                <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+                <script src="{% static 'js/imgfix.min.js' %}"></script> 
+                <!-- Global Init -->
+                <script src="{% static 'js/custom.js' %}"></script>
+                <script type="text/javascript">
+                  $('#myTab a').on('click', function (e) {
+                    e.preventDefault()
+                    $(this).tab('show')
+                  })
+                </script>
+              </body>
+              </html>
